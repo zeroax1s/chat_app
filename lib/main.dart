@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/alertDialogue.dart';
+import 'package:flutter/material.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +29,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text("Chatty App"),
       ),
       body: ListView(

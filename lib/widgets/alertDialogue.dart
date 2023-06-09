@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
+bool isTextFieldEmpty = true;
+
 showAlertDialog(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text("AlertDialogTest"),
-        content: Text("Test"),
-        actions: [
+        title: Text("Name Your Chat"),
+        content: TextField(
+          controller: TextEditingController(),
+          onChanged: (value) {},
+        ),
+        actions: <Widget>[
           TextButton(
             child: Text("Cancel"),
             onPressed: () {
@@ -15,7 +20,7 @@ showAlertDialog(BuildContext context) {
             },
           ),
           TextButton(
-            child: Text("Continue"),
+            child: Text("Save"),
             onPressed: () {},
           ),
         ],
