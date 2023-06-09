@@ -52,7 +52,7 @@ class _chatPageState extends State<chatPage> {
       );
       setState(() {
         chats.add(newChat);
-        userInput = ''; // Clear the input field after sending the message
+        userInput = '';
       });
     }
   }
