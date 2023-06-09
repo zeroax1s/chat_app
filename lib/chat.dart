@@ -42,6 +42,7 @@ class _chatPageState extends State<chatPage> {
               border: OutlineInputBorder(),
               labelText: 'Type Your Message',
               suffixIcon: IconButton(
+                color: Colors.lightGreen,
                 onPressed: () {},
                 icon: Icon(Icons.send),
               ),
