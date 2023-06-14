@@ -31,6 +31,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text("Chatty App"),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.elliptical(30, 20),
+          ),
+        ),
+        elevation: 0,
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),
@@ -42,6 +48,7 @@ class HomePage extends StatelessWidget {
         },
         label: Text("Add Channel"),
         icon: Icon(Icons.add),
+        elevation: 0,
       ),
     );
   }
