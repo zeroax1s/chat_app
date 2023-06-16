@@ -29,7 +29,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
   late ScrollController _scrollController;
-  double _toolbarHeight = 300.0;
+  double _toolbarHeight = 300;
 
   @override
   void initState() {
@@ -50,9 +50,9 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
   void _handleScroll() {
     setState(() {
       final offset = _scrollController.offset;
-      _toolbarHeight = offset <= 20.0 ? 300.0 : 300.0 - offset;
-      _toolbarHeight = _toolbarHeight.clamp(
-          1.0, 300.0); // Clamp the value within a valid range
+      _toolbarHeight = offset <= 1 ? 300 : 300 - offset;
+      _toolbarHeight =
+          _toolbarHeight.clamp(1, 300); // Clamp the value within a valid range
     });
   }
 
